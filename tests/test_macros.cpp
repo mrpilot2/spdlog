@@ -8,7 +8,7 @@
 #error "Invalid SPDLOG_ACTIVE_LEVEL in test. Should be SPDLOG_LEVEL_DEBUG"
 #endif
 
-TEST_CASE("debug and trace w/o format string", "[macros]]")
+TEST_CASE("debug and trace w/o format string", "[macros]")
 {
 
     prepare_logdir();
