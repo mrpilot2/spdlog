@@ -13,7 +13,7 @@ static void write_with_helper(file_helper &helper, size_t howmany)
     helper.flush();
 }
 
-TEST_CASE("file_helper_filename", "[file_helper::filename()]")
+TEST_CASE("file_helper_filename", "[file_helper::filename()]]")
 {
     prepare_logdir();
 
@@ -23,7 +23,7 @@ TEST_CASE("file_helper_filename", "[file_helper::filename()]")
     REQUIRE(helper.filename() == target_filename);
 }
 
-TEST_CASE("file_helper_size", "[file_helper::size()]")
+TEST_CASE("file_helper_size", "[file_helper::size()]]")
 {
     prepare_logdir();
     std::string target_filename = "test_logs/file_helper_test.txt";
@@ -37,7 +37,7 @@ TEST_CASE("file_helper_size", "[file_helper::size()]")
     REQUIRE(get_filesize(target_filename) == expected_size);
 }
 
-TEST_CASE("file_helper_reopen", "[file_helper::reopen()]")
+TEST_CASE("file_helper_reopen", "[file_helper::reopen()]]")
 {
     prepare_logdir();
     std::string target_filename = "test_logs/file_helper_test.txt";
@@ -49,7 +49,7 @@ TEST_CASE("file_helper_reopen", "[file_helper::reopen()]")
     REQUIRE(helper.size() == 0);
 }
 
-TEST_CASE("file_helper_reopen2", "[file_helper::reopen(false)]")
+TEST_CASE("file_helper_reopen2", "[file_helper::reopen(false)]]")
 {
     prepare_logdir();
     std::string target_filename = "test_logs/file_helper_test.txt";
@@ -79,7 +79,7 @@ static void test_split_ext(const char *fname, const char *expect_base, const cha
     REQUIRE(ext == expected_ext);
 }
 
-TEST_CASE("file_helper_split_by_extension", "[file_helper::split_by_extension()]")
+TEST_CASE("file_helper_split_by_extension", "[file_helper::split_by_extension()]]")
 {
     test_split_ext("mylog.txt", "mylog", ".txt");
     test_split_ext(".mylog.txt", ".mylog", ".txt");
